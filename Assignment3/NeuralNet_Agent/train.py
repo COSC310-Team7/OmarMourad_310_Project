@@ -50,7 +50,7 @@ class Model:
         # Create a lemmatizer object
         self.lemmatizer = WordNetLemmatizer()
         # read in intents.json file
-        path = 'P:/COSC310 - Software Engineering/Projects/Projects/Assignment3/NeuralNet_Agent/'
+        path = 'C:/Users/droga/Desktop/UBCO/COSC minor/COSC 310/Assignments/Individual Project/OmarMourad_310_Project/Assignment3/NeuralNet_Agent/'
         self.intents = json.loads(open(path + 'intents.json').read())
         # tags contains the list of all tags
         self.tags = []

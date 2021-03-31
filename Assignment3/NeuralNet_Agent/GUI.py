@@ -1,6 +1,6 @@
 # Import tkinter and agent.py
 from tkinter import *
-from Projects.Assignment3.NeuralNet_Agent.agent import *
+from agent import *
 
 # botname specified
 bot_name = "Steven"
