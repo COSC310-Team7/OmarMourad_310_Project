@@ -46,7 +46,7 @@ class ChatApplication:
         self.text_widget.place(relheight=0.745, relwidth=1, rely=0.08)
         self.text_widget.configure(state=NORMAL)
         intro_msg = "Welcome, we are here to help you with your computer issues. Please type \"Hello\" or the type " \
-                    "of issue you are having, to begin.\n\n"
+                    "of issue you are having, to begin.\nPlease type \"Place search\" if you wish to find address of a place of interest.\n\n"
         self.text_widget.insert(END, intro_msg)
         self.text_widget.configure(cursor="arrow", state=DISABLED)
 
