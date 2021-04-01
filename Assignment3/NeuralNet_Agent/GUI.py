@@ -1,9 +1,12 @@
 # Import tkinter and agent.py
 from tkinter import *
 from agent import *
+# from translate import *
+from places import *
 
 # botname specified
 bot_name = "Steven"
+PLACES_TRIGGERED = False
 
 BG_GRAY = "#ABB2B9"
 BG_COLOR = "#17202A"
@@ -42,7 +45,6 @@ class ChatApplication:
                                 font=FONT, padx=0, pady=0)
         self.text_widget.place(relheight=0.745, relwidth=1, rely=0.08)
         self.text_widget.configure(state=NORMAL)
-
         intro_msg = "Welcome, we are here to help you with your computer issues. Please type \"Hello\" or the type " \
                     "of issue you are having, to begin.\n\n"
         self.text_widget.insert(END, intro_msg)
@@ -74,17 +76,33 @@ class ChatApplication:
         self._insert_message(msg, "You")
 
     def _insert_message(self, msg, sender):
+        global PLACES_TRIGGERED
         if not msg:
             return  # if there is no text entered
-        msg = self.agent.spellCheck(msg)
+        # when user is about to enter a place search query
+        if not PLACES_TRIGGERED:
+            msg = self.agent.spellCheck(msg)
         self.msg_entry.delete(0, END)
         msg1 = f"{sender}: {msg}\n\n"
         self.text_widget.configure(state=NORMAL)
         self.text_widget.insert(END, msg1)
         self.text_widget.configure(state=DISABLED)
 
-        intentions = self.agent.predictResponse(msg)
-        msg2 = f"{bot_name}: {self.agent.getResponse(intentions)}\n\n"
+        botResponse = ""
+        #Google places API trigger
+        placesQue = "Place search"
+        if msg.lower() == placesQue.lower():
+            botResponse = "Please type in your place query now."
+            PLACES_TRIGGERED = True
+        elif PLACES_TRIGGERED:
+            botResponse = findPlace(msg)
+            PLACES_TRIGGERED = False
+            # Call Place search here
+        else:
+            intentions = self.agent.predictResponse(msg)
+            botResponse = self.agent.getResponse(intentions)
+        
+        msg2 = f"{bot_name}: {botResponse}\n\n"
         self.text_widget.configure(state=NORMAL)
         self.text_widget.insert(END, msg2)
         self.text_widget.configure(state=DISABLED)
