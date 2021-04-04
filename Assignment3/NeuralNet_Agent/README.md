@@ -137,7 +137,7 @@ Spell checking was implemented through the Autocorrect package. The implementati
 ### Google Places API
 Through this API, the user is able to search for a place of interest. This adds great value to the chatbot by allowing the user to search for a nearby store if they are still having computer problems that the chatbot can not help with. The places search is directly triggered by the green button on the GUI - "Search Place", where the user would type in the main message box and then click the button to receive address, full name, if the location is open, and its online rating. This data is directly extracted from Google search/maps.
 
-![PlacesAPI](images/PlacesAPI.PNG)
+![PlacesAPI](images/PlacesAPI.png)
 
 ### Google Directions API
 Through this API, the user can get directions from any two points: Origin and Destination. The user must provide a location for the origin and a location of the destination and then it optional to provide the mode of transportation from these 2 points. The modes listed are driving, walking, bicycling, and transit (it is set to driving by default). Once the user provides the required input, they may then click the blue button - "Get Directions" to receive the following information:
@@ -147,4 +147,4 @@ Through this API, the user can get directions from any two points: Origin and De
 * Summary of trip - "Via"
 * List of steps to take with distance of each step noted 
 
-![DirectionsAPI](images/DirectionsAPI.PNG)
+![DirectionsAPI](images/DirectionsAPI.png)
