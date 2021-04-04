@@ -107,10 +107,10 @@ The ChatApplication class is located in the app.py file. This class has the foll
 ## List of features
 Each features that will be mentioned below will include a rationale as to why it has been chosen and a snippet of the feature in action.
 
-### GUI
-Simple GUI developed to run the program where user can view converstation history. This allows for a cleaner interaction.
+### GUI - UPDATED With more features
+Simple GUI developed to run the program where user can view converstation history. This allows for a cleaner interaction. The GUI has been updated for this individual assignment to have two new buttons that are directly connected to the two new features: Google Directions and Google Places. Note: the send button is the only button directly linked to the "return" key on the keyboard.
 
-![GUI](images/GUI.PNG)
+![GUI](images/GUI-2.PNG)
 
 ### Stemming & Lemmatization
 Stemming & lemmatization attempts to find the base or dictionary form of a word. It does simple stuff of stemming a word from 'cars' to 'car' and it also uses the proper vocabulary of a word to convert it from 'am, are, is' to 'be' using lemmatization. The purpose is to reduce the vocabulary of the model and attempt to find the more general meaning behind sentences of the model and the input.
@@ -133,3 +133,18 @@ Spell checking was implemented through the Autocorrect package. The implementati
 ![Autocorrect](images/SpellCheck_part1.PNG)
 
 ![Autocorrect](images/SpellCheck_part2.PNG)
+
+### Google Places API
+Through this API, the user is able to search for a place of interest. This adds great value to the chatbot by allowing the user to search for a nearby store if they are still having computer problems that the chatbot can not help with. The places search is directly triggered by the green button on the GUI - "Search Place", where the user would type in the main message box and then click the button to receive address, full name, if the location is open, and its online rating. This data is directly extracted from Google search/maps.
+
+![PlacesAPI](images/PlacesAPI.PNG)
+
+### Google Directions API
+Through this API, the user can get directions from any two points: Origin and Destination. The user must provide a location for the origin and a location of the destination and then it optional to provide the mode of transportation from these 2 points. The modes listed are driving, walking, bicycling, and transit (it is set to driving by default). Once the user provides the required input, they may then click the blue button - "Get Directions" to receive the following information:
+* Overall distance
+* Overall duration
+* Mode of transportation chosen
+* Summary of trip - "Via"
+* List of steps to take with distance of each step noted 
+
+![DirectionsAPI](images/DirectionsAPI.PNG)
