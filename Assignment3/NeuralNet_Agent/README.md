@@ -89,10 +89,12 @@ The ChatApplication class is located in the app.py file. This class has the foll
 * **tags.pk1** *Stores the character stream of tags to be reconstructed later for the agent script*
 * **responses.pk1** *Stores the character stream of responses to be reconstructed later for the agent script*
 * **chatbotmodel.h5** *Trains the tags to have higher probabilities for certain words that consistently appear in its patterns and stores this information as a hierarchical data structure*
-* **playgrounds.py** Tests how POS tagging and synonyms can be used in conjunction
-* **GUI.py** Compiles the GUI for the chat bot
-* **places.py** Google Places API to access directory information and display them in a meaningful way
-* **directions.py** Google Directions API to get directions and integrate it into GUI
+* **playgrounds.py** *Tests how POS tagging and synonyms can be used in conjunction*
+* **GUI.py** *Compiles the GUI for the chat bot*
+* **places.py** *Google Places API to access directory information and display them in a meaningful way*
+* **directions.py** *Google Directions API to get directions and integrate it into GUI*
+* **places_api_key.txt** *Local hidden file that contains API key to access information from Google Places API*
+* **directions_api_key.txt** *Local hidden file that contains API key to access information from Google Directions API*
 ##  Imports 
 * Random
 * JSON 
