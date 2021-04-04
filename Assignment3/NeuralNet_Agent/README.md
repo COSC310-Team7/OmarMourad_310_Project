@@ -87,6 +87,8 @@ The ChatApplication class is located in the app.py file. This class has the foll
 * **chatbotmodel.h5** *Trains the tags to have higher probabilities for certain words that consistently appear in its patterns and stores this information as a hierarchical data structure*
 * **playgrounds.py** Tests how POS tagging and synonyms can be used in conjunction
 * **GUI.py** Compiles the GUI for the chat bot
+* **places.py** Google Places API to access directory information and display them in a meaningful way
+* **directions.py** Google Directions API to get directions and integrate it into GUI
 ##  Imports 
 * Random
 * JSON 
@@ -99,6 +101,8 @@ The ChatApplication class is located in the app.py file. This class has the foll
 * spacy
 * autocorrect
 * unittest
+* requests
+* re
 
 ## List of features
 Each features that will be mentioned below will include a rationale as to why it has been chosen and a snippet of the feature in action.
