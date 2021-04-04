@@ -65,7 +65,11 @@ The ChatApplication class is located in the app.py file. This class has the foll
   * ```run(): runs the chatbot in the GUI window mainloop.```
   * ```_setup_main_window(): A function of the window object that provides a title, window size and other features.```
   * ```_on_enter_pressed(): calls _insert_message function whenever user presses the enter button after typing a message.```
+  * ```_on_enter_direct(): calls _insert_directions function and passes the origin, destination, and mode as parametetrs. Activates when clicking the blue button.```
+  * ```_on_enter_search(): calls _insert_search function whenever user clicks the green button with a place typed in.```
   * ```_insert_message(): takes a message and a sender as a parameter and inputs both message and response into the main message box. Note: calls on methods within agent.py as well.```
+  * ```_insert_directions(): takes the origin, destination, and mode as input and then calls the getDirections() function from places.py to get directions between two points. ```
+  * ```_insert_search(): takes message and calls the findPlace() function from places.py to get address and other information about a place.```
 
 
 ## Compile training data for the chatbot
